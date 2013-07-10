@@ -25,8 +25,8 @@ Tur dibagi menjadi tiga bagian: konsep dasar, _method_ dan _interfaces_, dan _co
 
 Melalui tur Anda akan menemukan serangkaian latihan untuk diselesaikan.
 
-Tur bersifat interaktif. Klik pada tombol Jalankan sekarang (atau tekan Shift-Enter) untuk mengkompil program di
-#appengine: _remote server_.
+Tur bersifat interaktif. Klik pada tombol Jalankan (atau tekan Shift-Enter) untuk mengkompil program di
+#appengine: _remote_ _server_.
 komputer Anda.
 Hasilnya ditampilkan dibawah kode.
 
@@ -62,7 +62,7 @@ Program mulai berjalan di paket `main`.
 
 Program ini menggunakan paket dengan dengan import path `"fmt"` dan `"math"`.
 
-Berdasarkan konvensi, nama paket sama dengan element terakhir dari *import path*.
+Berdasarkan konvensi, nama paket sama dengan element terakhir dari import path.
 
 .play prog/packages.go
 
@@ -95,8 +95,7 @@ Pada contoh ini, `add` menerima dua parameter dengan tipe `int`.
 
 Perhatikan bahwa tipe disebutkan _setelah_ nama variabel.
 
-(For more about why types look the way they do, see the [[http://golang.org/doc/articles/gos_declaration_syntax.html][article on Go's declaration syntax]].)
-(Untuk penjelasan mengenai kenapa tipe terlihat seperti itu, lihat [[http://golang.org/doc/articles/gos_declaration_syntax.html][article on Go's declaration syntax]].)
+(Untuk penjelasan mengenai kenapa tipe terlihat seperti itu, lihat [[http://golang.org/doc/articles/gos_declaration_syntax.html][artikel mengenai deklarasi sintaks Go]].)
 
 .play prog/functions.go
 
@@ -252,55 +251,54 @@ Dalam kasus ini, metode Newton digunakan untuk mentaksir nilai `Sqrt(x)` dengan 
 
 Untuk memulainya, ulangi kalkulasi sebanyak 10 kali dan lihat seberapa dekat jawabannya untuk beragam nilai (1, 2, 3, ...).
 
-Next, change the loop condition to stop once the value has stopped changing (or only changes by a very small delta). See if that's more or fewer iterations. How close are you to the [[http://golang.org/pkg/math/#Sqrt][math.Sqrt]]?
-Selanjutnya, ganti kondisi iterasi untuk berhenti ketika nilai berhenti berganti (atau hanya berganti dengan delta yang sangat kecil),
+Selanjutnya, ganti kondisi iterasi untuk berhenti ketika nilai berhenti berganti (atau hanya berganti dengan delta yang sangat kecil). Perhatikan apakah iterasi terjadi lebih sedikit atau lebih banyak. Seberapa dekat hasil mu dengan [[http://golang.org/pkg/math/#Sqrt][math.Sqrt]]?
 
-Hint: to declare and initialize a floating point value, give it floating point syntax or use a conversion:
+Petunjuk: untuk mendeklarasikan dan menginisialisasi nilai floating point, berikan sintaks floating point atau gunakan konversi:
 
 	z := float64(1)
 	z := 1.0
 
 .play prog/exercise-loops-and-functions.go
 
-* Structs
+* Struct
 
-A `struct` is a collection of fields.
+`struct` adalah kumpulan field.
 
-(And a `type` declaration does what you'd expect.)
+(Dan deklarasi `type` melakukan apa yang Anda harapkan.)
 
 .play prog/structs.go
 
-* Struct Fields
+* Field Struct
 
-Struct fields are accessed using a dot.
+Field struct diakses menggunakan titik.
 
 .play prog/struct-fields.go
 
-* Pointers
+* Pointer
 
-Go has pointers, but no pointer arithmetic.
+Go memiliki pointer, tapi tidak ada pointer arimetik.
 
-Struct fields can be accessed through a struct pointer. The indirection through the pointer is transparent.
+Field struct dapat diakses melalui pointer struct. Indireksi terhadap pointer bersifat transparan.
 
 .play prog/pointers.go
 
-* Struct Literals
+* Literal Struct
 
-A struct literal denotes a newly allocated struct value by listing the values of its fields.
+Literal struct menandakan alokasi nilai struct baru dengan menjabarkan nilai field-nya.
 
-You can list just a subset of fields by using the `Name:` syntax. (And the order of named fields is irrelevant.)
+Anda dapat menjabarkan sebagian field dengan menggunkan sintaks `Name:`. (Dan urutan nama field tidak berpengaruh.)
 
-The special prefix `&` constructs a pointer to a newly allocated struct.
+Prefix khusus `&` membuatkan pointer untuk struct yang baru dialokasikan.
 
 .play prog/struct-literals.go
 
-* The new function
+* Fungsi new
 
-The expression `new(T)` allocates a zeroed `T` value and returns a pointer to it.
+Expresi `new(T)` akan mengalokasikan nilai-kosong pada `T` dan mengembalikan pointer terhadapnya.
 
 	var t *T = new(T)
 
-or
+atau
 
 	t := new(T)
 
@@ -308,41 +306,41 @@ or
 
 # TODO(campoy): Arrays section
 
-* Slices
+* Slice
 
-A slice points to an array of values and also includes a length.
+Slice merujuk ke array sebuah nilai yang juga menyertakan panjang.
 
-`[]T` is a slice with elements of type `T`.
+`[]T` merupakan slice dengan elemen bertipe `T`.
 
 .play prog/slices.go
 
-* Slicing slices
+* Mere-slice slices
 
-Slices can be re-sliced, creating a new slice value that points to the same array.
+Slice dapat dire-slice, mencipakan sebuah nilai slice baru yang merujuk array yang sama.
 
-The expression
+Ekspresi
 
 	s[lo:hi]
 
-evaluates to a slice of the elements from `lo` through `hi-1`, inclusive. Thus
+menghasilkan slice dengan element dari `lo` sampai `hi-1`, inklusif. Sehinnga
 
 	s[lo:lo]
 
-is empty and
+akan kosong dan
 
 	s[lo:lo+1]
 
-has one element.
+memiliki satu elemen.
 
 .play prog/slicing-slices.go
 
-* Making slices
+* Membuat slice
 
-Slices are created with the `make` function. It works by allocating a zeroed array and returning a slice that refers to that array:
+Slice dibuat dengan fungsi `make`. Yang berfungsi mengalokasikan array kosong dan mengembalikan slice yang merujuk ke array tersebut:
 
 	a := make([]int, 5)  // len(a)=5
 
-To specify a capacity, pass a third argument to `make`:
+Untuk memberikan kapasitas, sebutkan di argument ketiga dari `make`:
 
 	b := make([]int, 0, 5) // len(b)=0, cap(b)=5
 
@@ -351,13 +349,13 @@ To specify a capacity, pass a third argument to `make`:
 
 .play prog/making-slices.go
 
-* Nil slices
+* Slice nil
 
-The zero value of a slice is `nil`.
+Nilai kosong dari sabuah slice adalah `nil`.
 
-A nil slice has a length and capacity of 0.
+Slice nil memiliki panjang dan kapasitas 0.
 
-(To learn more about slices, read the [[http://golang.org/doc/articles/slices_usage_and_internals.html][Slices: usage and internals]] article.)
+(To belajar slice lebih lanjut, baca artikel [[http://golang.org/doc/articles/slices_usage_and_internals.html][Slice: penggunaan dan internalnya]].)
 
 .play prog/nil-slices.go
 
@@ -365,45 +363,45 @@ A nil slice has a length and capacity of 0.
 
 * Range
 
-The `range` form of the `for` loop iterates over a slice or map.
+Bentuk `range` loop `for` akan mengiterasi elemen di slice atau map.
 
 .play prog/range.go
 
-* Range continued
+* Range lanjutan
 
-You can skip the index or value by assigning to `_`.
+Anda dapat menghiraukan indeks atau nilai dengan memberikannya ke `_`.
 
-If you only want the index, drop the ", value" entirely.
+Jika Anda hanya ingin indeks, buang ", value".
 
 .play prog/range-continued.go
 
-* Exercise: Slices
+* Latihan: Slice
 
-Implement `Pic`. It should return a slice of length `dy`, each element of which is a slice of `dx` 8-bit unsigned integers. When you run the program, it will display your picture, interpreting the integers as grayscale (well, bluescale) values.
+Implementasikan `Pic`. Berikan nilai balik slice dengan panjang `dy`, setiap elemennya juga slice `dx`, integer 8-bit tak bertanda. Saat Anda menjalankan program, akan tampil gambar interpretasi integer sebagai grayscale (bluescale sih sebenarnya).
 
-The choice of image is up to you. Interesting functions include `x^y`, `(x+y)/2`, and `x*y`.
+Pilihan gambar terserah Anda. Fungsi yang menarik meliputi `x^y`, `(x+y)/2`, dan `x*y`.
 
-(You need to use a loop to allocate each `[]uint8` inside the `[][]uint8`.)
+(Anda membutuhkan sebuah loop untuk mengalokasikan setiap `[]uint8` didalam `[][]uint8`,)
 
-(Use `uint8(intValue)` to convert between types.)
+(Gunakan `uint(intValue)` untuk mengkonvesi tipe.)
 
 .play prog/exercise-slices.go
 
-* Maps
+* Map
 
-A map maps keys to values.
+Map memetakan kunci dengan nilai.
 
-Maps must be created with `make` (not `new`) before use; the `nil` map is empty and cannot be assigned to.
+Map harus dibuat dengan `make` (bukan `new`) sebelum digunakan; map `nil` tidak ada isinya dan tidak dapat diberikan nilai.
 
 .play prog/maps.go
 
-* Map literals
+* Literal map
 
-Map literals are like struct literals, but the keys are required.
+Literal map serupa dengan literal struct, tapi kunci dibutuhkan di literal map.
 
 .play prog/map-literals.go
 
-* Map literals continued
+* Literal map lanjutan
 
 If the top-level type is just a type name, you can omit it from the elements of the literal.
 
