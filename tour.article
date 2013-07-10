@@ -465,24 +465,24 @@ Implement a `fibonacci` function that returns a function (a closure) that return
 
 * Switch
 
-You probably knew what `switch` was going to look like.
+Mungkin Anda sudah mengetahui bagaimana `switch` akan terlihat.
 
-A case body breaks automatically, unless it ends with a `fallthrough` statement.
+Badan dari case akan break secara otomatis, kecuali diakhiri dengan pernyataan `fallthrough`.
 
 .play prog/switch.go
 
-* Switch evaluation order
+* Urutan evaluasi switch
 
-Switch cases evaluate cases from top to bottom, stopping when a case succeeds.
+Case pada switch mengevaluasi case dari atas ke bawah, berhenti jika sebuah case berhasil terevaluasi.
 
-(For example,
+(Misal,
 
 	switch i {
 	case 0:
 	case f():
 	}
 
-does not call `f` if `i==0`.)
+tidak akan memanggil `f` jika `i==0`.)
 
 #appengine: *Note:* Time in the Go playground always appears to start at
 #appengine: 2009-11-10 23:00:00 UTC, a value whose significance is left as an
@@ -490,15 +490,16 @@ does not call `f` if `i==0`.)
 
 .play prog/switch-evaluation-order.go
 
-* Switch with no condition
+* Switch tanpa kondisi
 
-Switch without a condition is the same as `switch`true`.
+Switch tanpa kondisi sama saja dengan `switch`true`.
 
-This construct can be a clean way to write long if-then-else chains.
+Bentuk ini dapat menjadi cara rapih menulis rantai if-then-else yang panjang.
 
 .play prog/switch-with-no-condition.go
 
 * Advanced Exercise: Complex cube roots
+* Latihan Tingkat Lanjut:
 
 Let's explore Go's built-in support for complex numbers via the `complex64` and `complex128` types. For cube roots, Newton's method amounts to repeating:
 
