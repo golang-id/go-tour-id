@@ -314,9 +314,9 @@ Slice merujuk ke array sebuah nilai yang juga menyertakan panjang.
 
 .play prog/slices.go
 
-* Mere-slice slices
+* Melakukan reslice pada slices
 
-Slice dapat dire-slice, mencipakan sebuah nilai slice baru yang merujuk array yang sama.
+Slice dapat di- _reslice_, menciptakan sebuah nilai slice baru yang merujuk array yang sama.
 
 Ekspresi
 
