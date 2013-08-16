@@ -183,7 +183,7 @@ Konstanta dapat berupa karakter, string, boolean, atau nilai numerik.
 
 * Konstanta Numerik
 
-Konstanta numberik memiliki _nilai_ dengan presisi tinggi.
+Konstanta numerik memiliki _nilai_ dengan presisi tinggi.
 
 Konstanta tak bertipe menggunakan tipe yang dibutuhkan berdasarkan konteksnya.
 
