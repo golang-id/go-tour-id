@@ -135,11 +135,11 @@ Pernyataan `var` mendeklarasikan sekumpulan variabel; seperti deretan argumen fu
 
 .play prog/variables.go
 
-* Variabel dengan penginisialisasi
+* Variabel dengan nilai inisial
 
 Deklarasi var dapat menyertakan nilai inisial, satu per variabel.
 
-Jika terdapat penginisialisasi, penyebutan tipe dapat diabaikan; variabel akan mengambil tipe dari nilai inisial.
+Jika terdapat nilai inisial, penyebutan tipe dapat diabaikan; variabel akan mengambil tipe dari nilai inisial.
 
 .play prog/variables-with-initializers.go
 
