@@ -7,10 +7,10 @@ type Vertex struct {
 }
 
 var (
-	p = Vertex{1, 2}  // has type Vertex
-	q = &Vertex{1, 2} // has type *Vertex
-	r = Vertex{X: 1}  // Y:0 is implicit
-	s = Vertex{}      // X:0 and Y:0
+	p = Vertex{1, 2}  // memiliki tipe Vertex
+	q = &Vertex{1, 2} // memiliki tipe *Vertex
+	r = Vertex{X: 1}  // Y:0 di set secara implisit
+	s = Vertex{}      // X:0 dan Y:0
 )
 
 func main() {
