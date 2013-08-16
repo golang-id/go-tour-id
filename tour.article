@@ -68,7 +68,7 @@ Berdasarkan konvensi, nama paket sama dengan element terakhir dari import path.
 
 * Import
 
-Kode ini mengrup import dengan kurung buka-tutup pernyataan import. Anda juga bisa menulis beberapa pernyataan import, seperti:
+Kode ini mengelompokan import dengan pernyataan import kurung buka-tutup. Anda juga bisa menulis beberapa pernyataan import menjadi beberapa baris, seperti:
 
 	import "fmt"
 	import "math"
