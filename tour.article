@@ -355,7 +355,7 @@ Nilai kosong dari sabuah slice adalah `nil`.
 
 Slice nil memiliki panjang dan kapasitas 0.
 
-(To belajar slice lebih lanjut, baca artikel [[http://golang.org/doc/articles/slices_usage_and_internals.html][Slice: penggunaan dan internalnya]].)
+(Untuk belajar slice lebih lanjut, baca artikel [[http://golang.org/doc/articles/slices_usage_and_internals.html][Slice: penggunaan dan internalnya]].)
 
 .play prog/nil-slices.go
 
