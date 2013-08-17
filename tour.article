@@ -484,9 +484,9 @@ Case pada switch mengevaluasi case dari atas ke bawah, berhenti jika sebuah case
 
 tidak akan memanggil `f` jika `i==0`.)
 
-#appengine: *Note:* Time in the Go playground always appears to start at
-#appengine: 2009-11-10 23:00:00 UTC, a value whose significance is left as an
-#appengine: exercise for the reader.
+#appengine: *Note:* Time di Go playground selalu ditampilkan dengan waktu mulai
+#appengine: 2009-11-10 23:00:00 UTC, nilai yang maknanya diserahkan kepada Anda
+#appengine: sebagai latihan.
 
 .play prog/switch-evaluation-order.go
 
