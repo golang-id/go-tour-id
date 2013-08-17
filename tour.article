@@ -509,13 +509,11 @@ Cari akar kubus dari 2 untuk memastikan algoritmanya bekerja. Ada fungsi [[http:
 
 .play prog/advanced-exercise-complex-cube-roots.go
 
-* Methods and Interfaces
+* Method dan Interface
 
-* Methods
+Go tidak memiliki class. Tapi method dapat didefinisikan di tipe struct.
 
-Go does not have classes. However, you can define methods on struct types.
-
-The _method_receiver_ appears in its own argument list between the `func` keyword and the method name.
+_Method_receiver_ tampil dengan argument sendiri diantara kata kunci `func` dan nama method.
 
 .play prog/methods.go
 
