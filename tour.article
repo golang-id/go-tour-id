@@ -455,11 +455,11 @@ Fungsi `adder` memberikan nilai balik sebuah closure. Setiap closure terikat den
 
 .play prog/function-closures.go
 
-* Exercise: Fibonacci closure
+* Latihan: Fibonacci closure
 
-Let's have some fun with functions.
+Mari kita bermain dengan fungsi.
 
-Implement a `fibonacci` function that returns a function (a closure) that returns successive fibonacci numbers.
+Implementasikan fungsi `fibonacci` yang mengembalikan nilai balik fungsi (closure) yang memberikan deret fibonacci.
 
 .play prog/exercise-fibonacci-closure.go
 
