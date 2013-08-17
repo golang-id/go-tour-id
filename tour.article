@@ -525,19 +525,19 @@ Anda tidak dapat mendefinisikan method di tipe dari paket lain, atau di tipe das
 
 .play prog/methods-continued.go
 
-* Methods with pointer receivers
+* Method dengan receiver pointer
 
-Methods can be associated with a named type or a pointer to a named type.
+Method dapat diasosiasikan dengan nama tipe atau pointer ke nama tipe.
 
-We just saw two `Abs` methods. One on the `*Vertex` pointer type and the other on the `MyFloat` value type.
+Kita baru saja melihat method `Abs`. Satu dengan tipe pointer `*Vertex` dan satu lagi dengan tipe `MyFloat`.
 
-There are two reasons to use a pointer receiver. First, to avoid copying the value on each method call (more efficient if the value type is a large struct). Second, so that the method can modify the value that its receiver points to.
+Ada dua alasan menggunakan receiver pointer. Pertama, untuk menghindari salinan nilai satiap kali method dipanggil (sangat efisien jika nilai tipe merupakan struct yang besar). Kedua, agar method dapat memodifikasi nilai yang receiver rujuk.
 
-Try changing the declarations of the `Abs` and `Scale` methods to use `Vertex` as the receiver, instead of `*Vertex`.
+Coba ubah deklarasi method `Abs` dan `Scale` dengan menggunakan `Vertex` sebagai receiver.
 
-The `Scale` method has no effect when `v` is a `Vertex`. `Scale` mutates `v`. When `v` is a value (non-pointer) type, the method sees a copy of the `Vertex` and cannot mutate the original value.
+Method `Scale` tidak berpengaruh saat `v` merupakan `Vertex`. `Scale` memodifikasi `v`. Saat `v` merupakan nilai tipe (non-pointer), method melihatnya sebagai salinan `Vertex` dan tidak dapat memodifikasi nilai orisinil.
 
-`Abs` works either way. It only reads `v`. It doesn't matter whether it is reading the original value (through a pointer) or a copy of that value.
+`Abs` dapat berjalan dengan keduanya karena hanya membaca `v`. Tidak masalah apakah yang dibaca itu nilai orisinil (melalui pointer) atau salinan nilai-nya.
 
 .play prog/methods-with-pointer-receivers.go
 
