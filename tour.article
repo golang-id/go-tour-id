@@ -403,55 +403,55 @@ Literal map serupa dengan literal struct, tapi kunci dibutuhkan di literal map.
 
 * Literal map lanjutan
 
-If the top-level type is just a type name, you can omit it from the elements of the literal.
+Jika tipe teratas adalah nama tipe, Anda dapat mengabaikan penyebutan nama tipe dari literal elemen.
 
 .play prog/map-literals-continued.go
 
-* Mutating Maps
+* Memodifikasi Maps
 
-Insert or update an element in map `m`:
+Menambahkan atau meng- _update_ elemen di map `m`:
 
 	m[key] = elem
 
-Retrieve an element:
+Memperoleh elemen:
 
 	elem = m[key]
 
-Delete an element:
+Menghapus elemen:
 
 	delete(m, key)
 
-Test that a key is present with a two-value assignment:
+Menguji apakah sebuah kunci tersedia dengan operasi penugasan dua-nilai:
 
 	elem, ok = m[key]
 
-If `key` is in `m`, `ok` is `true`. If not, `ok` is `false` and `elem` is the zero value for the map's element type.
+Jika `key` terdapat di `m`, `ok` bernilai `true`. Jika tidak, `ok` bernilai `false` dan `elem` mengandung nilai nol dari tipe elemen map.
 
-Similarly, when reading from a map if the key is not present the result is the zero value for the map's element type.
+Demikian juga saat membaca dari map, jika kunci tidak ada maka hasilnya adalah nilai nol dari tipe elemen map.
 
 .play prog/mutating-maps.go
 
 # TODO(campoy): Range on maps section
 
-* Exercise: Maps
+* Latihan: Map
 
-Implement `WordCount`.  It should return a map of the counts of each “word” in the string `s`. The `wc.Test` function runs a test suite against the provided function and prints success or failure.
+Implementasikan `WordCount`. Fungsi ini harus memberikan nilai balik map jumlah "kata" di string `s`. Fungsi `wc.Test` menjalankan kumpulan tes terhadap fungsi yang diberikan dan mencetak sukses atau gagal.
 
-You might find [[http://golang.org/pkg/strings/#Fields][strings.Fields]] helpful.
+Mungkin [[http://golang.org/pkg/strings/#Fields][strings.Fields]] dapat membantu Anda.
 
 .play prog/exercise-maps.go
 
-* Function values
+* Fungsi sebagai nilai
 
-Functions are values too.
+Fungsi juga merupakan nilai.
 
 .play prog/function-values.go
 
-* Function closures
+* Fungsi closure
 
-And functions are full closures.
+Dan fungsi juga sepenuhnya closure.
 
-The `adder` function returns a closure. Each closure is bound to its own `sum` variable.
+Fungsi `adder` memberikan nilai balik sebuah closure. Setiap closure terikat dengan variabel `sum` nya sendiri.
 
 .play prog/function-closures.go
 
