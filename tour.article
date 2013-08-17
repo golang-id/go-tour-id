@@ -517,11 +517,11 @@ _Method_receiver_ tampil dengan argument sendiri diantara kata kunci `func` dan 
 
 .play prog/methods.go
 
-* Methods continued
+* Method lanjutan
 
-In fact, you can define a method on _any_ type you define in your package, not just structs.
+Bahkan Anda dapat mendefinisikan method di tipe apapun yang Anda definisikan di paket, tidak hanya struct.
 
-You cannot define a method on a type from another package, or on a basic type.
+Anda tidak dapat mendefinisikan method di tipe dari paket lain, atau di tipe dasar.
 
 .play prog/methods-continued.go
 
