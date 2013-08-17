@@ -499,13 +499,13 @@ Bentuk ini dapat menjadi cara rapih menulis rantai if-then-else yang panjang.
 .play prog/switch-with-no-condition.go
 
 * Advanced Exercise: Complex cube roots
-* Latihan Tingkat Lanjut:
+* Latihan Tingkat Lanjut: Akar kubus kompleks
 
-Let's explore Go's built-in support for complex numbers via the `complex64` and `complex128` types. For cube roots, Newton's method amounts to repeating:
+Mari telesuri dukungan bawaan Go untuk bilangan kompleks melalui tipe `complex64` dan `complex128`. Untuk akar kubus, metode Newton yang digunakan dalam perulangan:
 
 .image static/newton3.png
 
-Find the cube root of 2, just to make sure the algorithm works. There is a [[http://golang.org/pkg/math/cmplx/#Pow][Pow]] function in the `math/cmplx` package.
+Cari akar kubus dari 2 untuk memastikan algoritmanya bekerja. Ada fungsi [[http://golang.org/pkg/math/cmplx/#Pow][Pow]] di paket `math/cmplx`.
 
 .play prog/advanced-exercise-complex-cube-roots.go
 
